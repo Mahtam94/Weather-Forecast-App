@@ -14,6 +14,7 @@
 		990733132D9FF7C3007151AB /* Weather_ForecatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990733122D9FF7C3007151AB /* Weather_ForecatTests.swift */; };
 		9907331D2D9FF7C3007151AB /* Weather_ForecatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9907331C2D9FF7C3007151AB /* Weather_ForecatUITests.swift */; };
 		9907331F2D9FF7C3007151AB /* Weather_ForecatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9907331E2D9FF7C3007151AB /* Weather_ForecatUITestsLaunchTests.swift */; };
+		9907332C2DA13B42007151AB /* weatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9907332B2DA13B42007151AB /* weatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		990733182D9FF7C3007151AB /* Weather ForecatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Weather ForecatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9907331C2D9FF7C3007151AB /* Weather_ForecatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_ForecatUITests.swift; sourceTree = "<group>"; };
 		9907331E2D9FF7C3007151AB /* Weather_ForecatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_ForecatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9907332B2DA13B42007151AB /* weatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				990733012D9FF7BF007151AB /* Weather_ForecatApp.swift */,
 				990733032D9FF7BF007151AB /* ContentView.swift */,
+				9907332B2DA13B42007151AB /* weatherModel.swift */,
 				990733052D9FF7C2007151AB /* Assets.xcassets */,
 				990733072D9FF7C2007151AB /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				990733042D9FF7BF007151AB /* ContentView.swift in Sources */,
+				9907332C2DA13B42007151AB /* weatherModel.swift in Sources */,
 				990733022D9FF7BF007151AB /* Weather_ForecatApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
