@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var Temperature: String = ""
     @State private var Description: String = ""
     @State private var isLoading: Bool = false
+    @State private var errorMessage: String = ""
 
     var body: some View {
         ZStack {
@@ -20,7 +21,9 @@ struct ContentView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
+            
             VStack(spacing: 20) {
+                
                 Text("🌦️ Weather App")
                     .font(.largeTitle)
                     .bold()
@@ -39,10 +42,19 @@ struct ContentView: View {
                         .foregroundColor(Color.white)
                         .cornerRadius(10)
                 }
+                Spacer()
                 if isLoading {
                     ProgressView("Fetching weather...")
                         .padding()
                 }
+                
+                if !errorMessage.isEmpty {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
+                }
+
                 
                 //.padding(.horizontal)
                 
@@ -56,22 +68,30 @@ struct ContentView: View {
                             .foregroundColor(.gray)
                     }
                     .padding(.bottom, 30)
+                    Spacer()
+                    
                 }
-                
+                    
+
             }
-            .padding()
+            .padding(.horizontal,60)
+            .padding(.top, 50)
+            
         }
     }
+    
+        
 
     func fetchWeather(for city: String) {
         isLoading = true // Start loading
+        errorMessage = "" // reset previous error
         
-        let apiKey = "f1cc988ed3666ce8d2988a3bcf4762ee"
+        let apiKey = "APIKey123abc"
         let cityQuery = city.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? city
         let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(cityQuery)&appid=\(apiKey)&units=metric"
         
         guard let url = URL(string: urlString) else {
-            print("Invalid URL.")
+            errorMessage = "Invalid URL."
             return
         }
         
@@ -80,9 +100,16 @@ struct ContentView: View {
                 self.isLoading = false // Stop loading when done
             }
             if let error = error {
-                print("Error fetching data: \(error.localizedDescription)")
+                errorMessage = "Failed to fetch data: \(error.localizedDescription)"
                 return
             }
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+                DispatchQueue.main.async {
+                                errorMessage = "Could not find that city. Please try again."
+                            }
+                            return
+                        }
             guard let data = data else {
                 print("No data returned.")
                 return
@@ -107,11 +134,11 @@ struct ContentView: View {
         if lowercased.contains("clear") {
             return "clear"
         } else if lowercased.contains("cloud") {
-            return "clouds"
+            return "cloudy"
         } else if lowercased.contains("rain") {
-            return "rain"
+            return "rainy"
         } else if lowercased.contains("snow") {
-            return "snow"
+            return "snowy"
         } else {
             return "default" // A safe fallback image
         }

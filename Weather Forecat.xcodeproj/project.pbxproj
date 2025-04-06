@@ -15,6 +15,7 @@
 		9907331D2D9FF7C3007151AB /* Weather_ForecatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9907331C2D9FF7C3007151AB /* Weather_ForecatUITests.swift */; };
 		9907331F2D9FF7C3007151AB /* Weather_ForecatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9907331E2D9FF7C3007151AB /* Weather_ForecatUITestsLaunchTests.swift */; };
 		9907332C2DA13B42007151AB /* weatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9907332B2DA13B42007151AB /* weatherModel.swift */; };
+		9907332E2DA2B4FA007151AB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9907332D2DA2B4FA007151AB /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		9907331C2D9FF7C3007151AB /* Weather_ForecatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_ForecatUITests.swift; sourceTree = "<group>"; };
 		9907331E2D9FF7C3007151AB /* Weather_ForecatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather_ForecatUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9907332B2DA13B42007151AB /* weatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherModel.swift; sourceTree = "<group>"; };
+		9907332D2DA2B4FA007151AB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				990733012D9FF7BF007151AB /* Weather_ForecatApp.swift */,
 				990733032D9FF7BF007151AB /* ContentView.swift */,
+				9907332D2DA2B4FA007151AB /* README.md */,
 				9907332B2DA13B42007151AB /* weatherModel.swift */,
 				990733052D9FF7C2007151AB /* Assets.xcassets */,
 				990733072D9FF7C2007151AB /* Preview Content */,
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9907332E2DA2B4FA007151AB /* README.md in Resources */,
 				990733092D9FF7C2007151AB /* Preview Assets.xcassets in Resources */,
 				990733062D9FF7C2007151AB /* Assets.xcassets in Resources */,
 			);
